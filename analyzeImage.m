@@ -23,9 +23,8 @@ lineprob = 0;
 grayim = mat2gray(image); % image to grayscale
 [indim, cmap] = gray2ind(grayim, 64); % indexed image with colormap cmap of 64 gray shades
 
-%[thresholds, metric] = multithresh(indim, 3); % compute tone thresholds (amount = 3) and their effectiveness from indexed image
+[thresholds, metric] = multithresh(indim, 3); % compute tone thresholds (amount = 3) and their effectiveness from indexed image
 
-thresholds = [45, 50, 60];
 % -- you might want to consider compressing image before processing? --
 
 for v = 1:r  % grid image and process each subimage
